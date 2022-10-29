@@ -1,5 +1,4 @@
 var textareacolor = document.querySelectorAll("textarea");
-var savebutton = document.querySelectorAll("button");
 
 // TO DISPLAY THE CURRENT DATE
 var day = moment().format("dddd, Do MMMM YYYY");
@@ -9,7 +8,6 @@ $("#currentDay").text(day);
 var hour = moment().hour();
 
 // TO CHANGE THE COLOR OFTHE TECTAREA SEPENDIDNG ON THE TIME  OF THE DAY
-console.log(textareacolor)
 for (let i = 0; i < textareacolor.length; i++) {
     var time = textareacolor[i].dataset.time 
     var htime = parseInt(time)
@@ -23,3 +21,9 @@ for (let i = 0; i < textareacolor.length; i++) {
 }
 
 // TO store the text inputed by the user to local storage and be displayed after being refreshed when the button has been clicked
+$(".saveBtn").click(function (event) {
+    event.preventDefault();
+    let hourClicked = $(this).parent('section').children('textarea').data('time')
+    let notesSaved = $(this).parent('section').children('textarea').val()
+    localStorage.setItem('hour' + hourClicked, notesSaved)
+})
