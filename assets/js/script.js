@@ -1,4 +1,5 @@
 var textareacolor = document.querySelectorAll("textarea");
+var savebutton = document.querySelectorAll("button");
 
 // TO DISPLAY THE CURRENT DATE
 var day = moment().format("dddd, Do MMMM YYYY");
@@ -20,3 +21,5 @@ for (let i = 0; i < textareacolor.length; i++) {
         textareacolor[i].classList.add('future');
     }
 }
+
+// TO store the text inputed by the user to local storage and be displayed after being refreshed when the button has been clicked
