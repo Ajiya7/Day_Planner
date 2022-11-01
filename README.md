@@ -32,7 +32,9 @@ THEN the saved events persist
 
 ## Usage
 
-*
+* To use the day planner just write into the text box of the hour of your choice and then click the save button to save what you have just typed. if the hour is in the past the color of thr text box will be grey, if its the current hour it will be red and if tis in the future the color will be green.
+
+* screenshot of the webpage is located in the images folder which is in the assets folder : ./assets/images/Screenshot 2022-10-31 at 9.45.14 PM.png
 
 ## Contact Me
 
